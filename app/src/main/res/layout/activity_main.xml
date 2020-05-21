@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/pnlMain"
+    android:background="@drawable/clock"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hatırlatma Sırası:"
+        android:textStyle="bold"
+        android:textColor="@android:color/background_dark"
+        android:textAlignment="center"
+        android:textSize="25dp"/>
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:spinnerMode="dialog"
+        android:id="@+id/spnID">
+
+    </Spinner>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/background_dark"
+        android:text="Kategori Seçiniz:"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textSize="25dp"/>
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:spinnerMode="dropdown"
+        android:id="@+id/spnCategory">
+    </Spinner>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:textSize="30dp"
+        android:textColor="@android:color/background_dark"
+        android:id="@+id/txtText"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:textSize="30dp"
+        android:inputType="date"
+        android:id="@+id/txtDate"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/btnSave"
+            android:onClick="saveOrupdate_Click"
+            android:background="@drawable/button_style_01"
+            android:textColor="#fff"
+            android:layout_marginTop="20dp"
+            android:text="Save or Update Your Record"/>
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnDelete"
+            android:layout_gravity="center"
+            android:background="@drawable/button_style_01"
+            android:textColor="#fff"
+            android:layout_marginTop="20dp"
+            android:onClick="delete_Click"
+            android:text="Delete Record"/>
+        <Button
+            android:layout_width="150dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnClear"
+            android:background="@drawable/button_style_01"
+            android:textColor="#fff"
+            android:layout_marginTop="20dp"
+            android:onClick="clearFields_Click"
+            android:text="Clear Fields"/>
+
+    </LinearLayout>
+</LinearLayout>
